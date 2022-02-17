@@ -5,7 +5,6 @@ import TextField from '@mui/material/TextField';
 import SavedSearchIcon from '@mui/icons-material/SavedSearch';
 
 const Busqueda = ({handleChange, handleClick,loading}) => {
-  
   return (
     <Container sx={{ display: 'flex', justifyContent: 'center', mt: 8, mb: 6 }}>
       <Box component="form">
