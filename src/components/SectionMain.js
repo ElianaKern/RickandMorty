@@ -5,7 +5,7 @@ import Container from '@mui/material/Container';
 const SectionMain = ({personajes}) => {
     return (
       <Container fixed>
-        <Cards dataPersonajes={personajes} />
+        <Cards dataPersonajes={personajes}/>
       </Container>
     );
 }

@@ -7,7 +7,11 @@ import {Link } from "react-router-dom"
 
 
 const Nav = () => {
-  const linksNav=["Principal","Personajes", "Ubicacion", "Episodios"]
+  const linksNav = [
+    { nombre: 'Personajes', url:"Personajes"},
+    { nombre: 'Ubicacion', url:"Ubicacion"},
+    { nombre: 'Episodios', url:"Episodios"},
+  ];
   return (
       <Box sx={{ flexGrow: 1, mb: '12' }}>
         <AppBar position="static" sx={{ bgcolor: 'warning.light' }}>
@@ -15,11 +19,11 @@ const Nav = () => {
             <Typography variant="h6" component="h1" sx={{ flexGrow: 1 }}>
               Rick and Morty
             </Typography>
-            <Box sx={{}}>
+            <Box>
               {linksNav.map((link) => {
                 return (
-                  <Link to={link} underline="hover">
-                    {link}
+                  <Link to={link.url} underline="hover">
+                    {link.nombre}
                   </Link>
                 );
               })}
