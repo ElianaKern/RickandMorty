@@ -23,7 +23,7 @@ const Cards = ({ dataPersonajes }) => {
               component="img"
               height="60%"
               image={personaje.image}
-              alt="imagen del personaje"
+              alt={personaje.name}
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h3">

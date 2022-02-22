@@ -45,11 +45,17 @@ const App = () => {
           loading={loading}
         />
         <Routes>
-          <Route path="/Personajes" element={<SectionMain personajes={personajes} />}></Route>
-          <Route path="/Ubicacion" element={<Ubicacion/>}></Route>
-          <Route path="/Episodios" element={<Episodios/>}></Route>
-          <Route path="/:idPersonajes" element={<DetallePersonaje/>}></Route>
-          <Route path="*" element={<ErrorNoEncontrado/>}></Route>
+          <Route
+            path="RickandMorty/Personajes"
+            element={<SectionMain personajes={personajes} />}
+          ></Route>
+          <Route path="RickandMorty/Ubicacion" element={<Ubicacion />}></Route>
+          <Route path="RickandMorty/Episodios" element={<Episodios />}></Route>
+          <Route
+            path="RickandMorty/:idPersonajes"
+            element={<DetallePersonaje />}
+          ></Route>
+          <Route path="RickandMorty/*" element={<ErrorNoEncontrado />}></Route>
         </Routes>
 
         <Footer />
