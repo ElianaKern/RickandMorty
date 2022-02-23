@@ -38,7 +38,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <div>
-        <Nav />
+        <Nav/>
         <Busqueda
           handleChange={handleChange}
           handleClick={handleClick}
@@ -46,16 +46,16 @@ const App = () => {
         />
         <Routes>
           <Route
-            path="RickandMorty/Personajes"
+            path="/Personajes"
             element={<SectionMain personajes={personajes} />}
           ></Route>
-          <Route path="RickandMorty/Ubicacion" element={<Ubicacion />}></Route>
-          <Route path="RickandMorty/Episodios" element={<Episodios />}></Route>
+          <Route path="/Ubicacion" element={<Ubicacion />}></Route>
+          <Route path="/Episodios" element={<Episodios />}></Route>
           <Route
-            path="RickandMorty/:idPersonajes"
+            path="/:idPersonajes"
             element={<DetallePersonaje />}
           ></Route>
-          <Route path="RickandMorty/*" element={<ErrorNoEncontrado />}></Route>
+          <Route path="*" element={<ErrorNoEncontrado />}></Route>
         </Routes>
 
         <Footer />

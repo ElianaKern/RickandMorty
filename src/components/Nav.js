@@ -8,9 +8,9 @@ import {Link } from "react-router-dom"
 
 const Nav = () => {
   const linksNav = [
-    { nombre: 'Personajes', url:"Personajes"},
-    { nombre: 'Ubicacion', url:"Ubicacion"},
-    { nombre: 'Episodios', url:"Episodios"},
+    { nombre: 'Personajes', url: '/Personajes' },
+    { nombre: 'Ubicacion', url: '/Ubicacion' },
+    { nombre: 'Episodios', url: '/Episodios' },
   ];
   return (
       <Box sx={{ flexGrow: 1, mb: '12' }}>
@@ -22,7 +22,7 @@ const Nav = () => {
             <Box>
               {linksNav.map((link) => {
                 return (
-                  <Link to={link.url} underline="hover">
+                  <Link to={link.url} underline="hover" key={link.nombre}>
                     {link.nombre}
                   </Link>
                 );
